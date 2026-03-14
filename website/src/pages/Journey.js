@@ -9,15 +9,32 @@ return(
 
 <h2>My Life Journey</h2>
 
+
 <div className="timeline">
 
-<div className="timeline-item">
-
-<h3>2022</h3>
+    <div className="timeline-item">  
+        <h3>Coming Soon 🚧</h3>
 
 <p>
-Started learning programming with C and C++. 
-This was the beginning of my journey in technology.
+I am currently working on writing my life journey and experiences.
+This section will be updated soon with my personal story,
+learning experiences, and important milestones.
+Stay tuned!
+</p>
+</div>
+
+
+
+
+
+
+<div className="timeline-item">
+
+
+<h3>Infancy (0 – 2 years)</h3>
+
+<p>
+
 </p>
 
 </div>
@@ -25,11 +42,10 @@ This was the beginning of my journey in technology.
 
 <div className="timeline-item">
 
-<h3>2023</h3>
+<h3>Childhood (3 – 12 years)</h3>
 
 <p>
-Explored Data Structures and Algorithms and started 
-building small coding projects.
+
 </p>
 
 </div>
@@ -37,11 +53,10 @@ building small coding projects.
 
 <div className="timeline-item">
 
-<h3>2024</h3>
+<h3>Adolescence / Teenage (13 – 19 years)</h3>
 
 <p>
-Learned Web Development including HTML, CSS, JavaScript,
-React, Node.js and MongoDB.
+
 </p>
 
 </div>
@@ -49,11 +64,10 @@ React, Node.js and MongoDB.
 
 <div className="timeline-item">
 
-<h3>2025</h3>
+<h3>Young Adulthood (20 – 35 years)</h3>
 
 <p>
-Built projects like Uttam Study Point and Smart Mirror
-using Raspberry Pi and AI technologies.
+
 </p>
 
 </div>
@@ -61,11 +75,10 @@ using Raspberry Pi and AI technologies.
 
 <div className="timeline-item">
 
-<h3>Future</h3>
+<h3>Future Goals</h3>
 
 <p>
-My goal is to become a skilled software developer
-and build innovative technology solutions.
+
 </p>
 
 </div>

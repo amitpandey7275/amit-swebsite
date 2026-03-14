@@ -7,7 +7,7 @@ display:flex;
 justify-content:center;
 align-items:center;
 
-background:linear-gradient(135deg,#4facfe,#00f2fe);
+background:linear-gradient(135deg,#1f1c2c,#928dab);
 
 }
 
@@ -16,15 +16,21 @@ background:linear-gradient(135deg,#4facfe,#00f2fe);
 
 .login-card{
 
-background:white;
+background:rgba(255,255,255,0.95);
 padding:40px;
-border-radius:12px;
-width:320px;
+border-radius:14px;
+width:340px;
 
-box-shadow:0 10px 25px rgba(0,0,0,0.2);
+box-shadow:0 15px 35px rgba(0,0,0,0.3);
 
 text-align:center;
 
+transition:0.3s;
+
+}
+
+.login-card:hover{
+transform:translateY(-5px);
 }
 
 
@@ -34,6 +40,7 @@ text-align:center;
 
 margin-bottom:25px;
 color:#333;
+font-size:26px;
 
 }
 
@@ -47,10 +54,21 @@ padding:12px;
 
 margin:10px 0;
 
-border:1px solid #ccc;
-border-radius:6px;
+border:1px solid #ddd;
+border-radius:8px;
 
 font-size:14px;
+
+outline:none;
+
+transition:0.3s;
+
+}
+
+.login-card input:focus{
+
+border-color:#6c63ff;
+box-shadow:0 0 6px rgba(108,99,255,0.4);
 
 }
 
@@ -63,10 +81,10 @@ width:100%;
 
 padding:12px;
 
-background:#4facfe;
+background:linear-gradient(90deg,#6c63ff,#8f86ff);
 
 border:none;
-border-radius:6px;
+border-radius:8px;
 
 color:white;
 
@@ -81,7 +99,8 @@ transition:0.3s;
 
 .login-card button:hover{
 
-background:#007bff;
+background:linear-gradient(90deg,#574fd6,#6c63ff);
+transform:scale(1.03);
 
 }
 
@@ -98,8 +117,10 @@ font-size:14px;
 
 .login-card a{
 
-color:#007bff;
+color:#6c63ff;
 text-decoration:none;
+
+font-weight:500;
 
 }
 
