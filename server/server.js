@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const multer = require("multer");
 const path = require("path");
+const bcrypt = require("bcryptjs");
 
 const app = express();
 
@@ -10,13 +11,14 @@ app.use(express.json());
 app.use(cors());
 
 
-// MongoDB connection
+// ================= MongoDB Connection =================
 
 mongoose.connect(
 "mongodb+srv://amit:amit123@mywebsite.ifmvupf.mongodb.net/mywebsite?retryWrites=true&w=majority"
 )
 .then(()=>console.log("MongoDB Atlas connected"))
 .catch(err=>console.log(err));
+
 
 
 // ================= USER SCHEMA =================
@@ -42,6 +44,7 @@ required:true
 });
 
 const User = mongoose.model("User",UserSchema);
+
 
 
 // ================= PHOTO SCHEMA =================
@@ -72,10 +75,12 @@ message:"User already exists"
 });
 }
 
+const hashedPassword = await bcrypt.hash(password,10);
+
 const user = new User({
 name,
 email,
-password
+password:hashedPassword
 });
 
 await user.save();
@@ -110,7 +115,12 @@ message:"User not found"
 });
 }
 
-if(user.password !== password){
+const validPassword = await bcrypt.compare(
+password,
+user.password
+);
+
+if(!validPassword){
 return res.status(400).json({
 message:"Wrong password"
 });
@@ -151,6 +161,7 @@ const upload = multer({storage:storage});
 
 
 // ================= PHOTO UPLOAD API =================
+
 app.post("/upload", upload.single("photo"), async(req,res)=>{
 
 try{
@@ -169,11 +180,13 @@ image:imagePath
 });
 
 }
+
 catch(err){
 res.status(500).json(err);
 }
 
 });
+
 
 
 // ================= GET ALL PHOTOS =================
@@ -187,6 +200,7 @@ const photos = await Photo.find();
 res.json(photos);
 
 }
+
 catch(err){
 res.status(500).json(err);
 }
@@ -195,21 +209,26 @@ res.status(500).json(err);
 
 
 
-// ================= STATIC FOLDER =================
+// ================= STATIC UPLOADS =================
 
 app.use("/uploads", express.static("uploads"));
 
 
 
-app.use(express.static(path.join(__dirname, "../website/build")));
+// ================= REACT BUILD =================
 
-app.use((req, res) => {
-  res.sendFile(path.join(__dirname, '../website/build/index.html'));
+app.use(express.static(path.join(__dirname,"../website/build")));
+
+app.use((req,res)=>{
+res.sendFile(path.join(__dirname,"../website/build/index.html"));
 });
 
+
+
 // ================= SERVER =================
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT,()=>{
-console.log("Server running");
+console.log("Server running on port " + PORT);
 });
