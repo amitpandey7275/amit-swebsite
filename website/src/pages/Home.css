@@ -1,0 +1,237 @@
+/* body */
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#f9f9f9;
+}
+
+
+/* navbar */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#333;
+padding:15px 40px;
+color:white;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+.navbar ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+font-size:16px;
+transition:0.3s;
+}
+
+.navbar a:hover{
+color:#ffd700;
+}
+
+
+/* home section */
+
+.home{
+
+min-height:100vh;
+
+background:linear-gradient(
+rgba(0,0,0,0.5),
+rgba(0,0,0,0.5)
+),
+url("../images/home.png");
+
+background-size:contain;   /* पूरी image दिखेगी */
+
+background-position:center;
+
+background-repeat:no-repeat;
+
+background-color:#000;  /* खाली space black */
+
+color:white;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+}
+
+
+.home h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.home p{
+font-size:18px;
+}
+
+
+/* sections */
+
+.section{
+padding:70px 40px;
+text-align:center;
+}
+
+.section h2{
+font-size:32px;
+margin-bottom:20px;
+color:#333;
+}
+
+.section p{
+max-width:700px;
+margin:auto;
+line-height:1.6;
+color:#555;
+}
+
+
+/* project cards */
+
+.cards{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:12px;
+width:250px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card h3{
+margin-bottom:10px;
+color:#333;
+}
+
+
+/* gallery */
+
+.gallery{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.gallery img{
+width:200px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+
+/* contact icons */
+
+.contact-icons{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-top:20px;
+flex-wrap:wrap;
+}
+
+.contact-icons a{
+font-size:30px;
+transition:0.3s;
+}
+
+.contact-icons a:hover{
+transform:scale(1.3);
+}
+
+
+/* icon colors */
+
+.contact-icons a:nth-child(1){
+color:#EA4335;
+}
+
+.contact-icons a:nth-child(2){
+color:#2E86C1;
+}
+
+.contact-icons a:nth-child(3){
+color:black;
+}
+
+.contact-icons a:nth-child(4){
+color:#0077B5;
+}
+
+.contact-icons a:nth-child(5){
+color:red;
+}
+
+.contact-icons a:nth-child(6){
+color:#E1306C;
+}
+
+.contact-icons a:nth-child(7){
+color:#25D366;
+}
+
+.contact-icons a:nth-child(8){
+color:#1877F2;
+}
+
+.contact-icons a:nth-child(9){
+color:#FFFC00;
+}
+
+
+/* responsive */
+
+@media (max-width:768px){
+
+.navbar{
+flex-direction:column;
+gap:10px;
+}
+
+.navbar ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.cards{
+flex-direction:column;
+align-items:center;
+}
+
+}
