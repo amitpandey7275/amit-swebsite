@@ -8,7 +8,7 @@ const [photos,setPhotos] = useState([]);
 
 useEffect(()=>{
 
-axios.get("https://your-backend.onrender.com/photos")
+axios.get("https://amit-swebsite.onrender.com/photos")
 .then(res=>{
 setPhotos(res.data);
 })
@@ -36,7 +36,7 @@ return(
 
 <img
 key={photo._id}
-src={photo.image}
+src={`https://amit-swebsite.onrender.com${photo.image}`}
 alt="uploaded"
 />
 

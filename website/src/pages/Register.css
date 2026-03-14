@@ -1,117 +1,121 @@
 /* background */
 
 .register-container{
-
 height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
 
-background:linear-gradient(135deg,#43e97b,#38f9d7);
+background:linear-gradient(135deg,#43e97b,#38f9d7,#4facfe);
+background-size:300% 300%;
+animation:gradientMove 8s ease infinite;
+}
 
+/* gradient animation */
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 }
 
 
 /* card */
 
 .register-card{
-
-background:white;
+background:rgba(255,255,255,0.95);
 
 padding:40px;
+border-radius:15px;
 
-border-radius:12px;
+width:340px;
 
-width:320px;
-
-box-shadow:0 10px 25px rgba(0,0,0,0.2);
+box-shadow:0 15px 40px rgba(0,0,0,0.25);
 
 text-align:center;
 
+backdrop-filter:blur(10px);
+
+transition:0.3s;
+}
+
+.register-card:hover{
+transform:translateY(-5px);
+box-shadow:0 20px 45px rgba(0,0,0,0.3);
 }
 
 
 /* heading */
 
 .register-card h2{
-
 margin-bottom:25px;
-
-color:#333;
-
+color:#222;
+font-weight:600;
 }
 
 
 /* inputs */
 
 .register-card input{
-
 width:100%;
-
 padding:12px;
-
 margin:10px 0;
 
-border:1px solid #ccc;
-
-border-radius:6px;
+border:1px solid #ddd;
+border-radius:8px;
 
 font-size:14px;
 
+transition:0.3s;
+}
+
+.register-card input:focus{
+border-color:#43e97b;
+outline:none;
+box-shadow:0 0 5px rgba(67,233,123,0.5);
 }
 
 
 /* button */
 
 .register-card button{
-
 width:100%;
-
 padding:12px;
 
-background:#43e97b;
+background:linear-gradient(135deg,#43e97b,#38f9d7);
 
 border:none;
-
-border-radius:6px;
+border-radius:8px;
 
 color:white;
-
 font-size:16px;
+font-weight:500;
 
 cursor:pointer;
 
 transition:0.3s;
-
 }
 
 .register-card button:hover{
-
-background:#20c997;
-
+transform:scale(1.03);
+background:linear-gradient(135deg,#20c997,#38f9d7);
 }
 
 
 /* login link */
 
 .register-card p{
-
 margin-top:15px;
-
 font-size:14px;
-
+color:#555;
 }
 
 .register-card a{
-
 color:#007bff;
-
 text-decoration:none;
-
+font-weight:500;
 }
 
 .register-card a:hover{
-
 text-decoration:underline;
-
 }
