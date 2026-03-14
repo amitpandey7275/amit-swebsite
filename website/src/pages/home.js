@@ -52,18 +52,14 @@ return (
 <Link to="/login" state={{from:"/journey"}}>Life Journey</Link>
 </li>
 
-<li><a href="#contact">Contact</a></li>
-
 </ul>
 
 </nav>
 
 
-<section
-id="home"
-className="home"
+{/* Home */}
 
->
+<section id="home" className="home">
 
 <h1>Namaste 🙏</h1>
 
@@ -151,12 +147,12 @@ I continuously learn new technologies and create innovative projects.
 
 <div className="card">
 <h3>12th Science</h3>
-<p>Completed higher secondary education with science stream from Pt. RCMMPS Public School (CBSE) — 2023</p>
+<p>Pt. RCMMPS Public School (CBSE) — 2023</p>
 </div>
 
 <div className="card">
 <h3>10th</h3>
-<p>Completed secondary education from St. Vishna RRN School (CBSE) — 2021</p>
+<p>St. Vishna RRN School (CBSE) — 2021</p>
 </div>
 
 </div>
@@ -206,64 +202,36 @@ I continuously learn new technologies and create innovative projects.
 </section>
 
 
-{/* Contact */}
-
-<section id="contact" className="section">
-
-<h2>Contact</h2>
-
-<div className="contact-icons">
-
-<a href="mailto:ap6238969@gmail.com">
-<FaEnvelope size={35}/>
-</a>
-
-<a href="tel:+917275606829">
-<FaPhone size={35}/>
-</a>
-
-<a href="https://github.com/amitpandey7275" target="_blank" rel="noreferrer">
-<FaGithub size={35}/>
-</a>
-
-<a href="https://linkedin.com/in/amit_pandey7275" target="_blank" rel="noreferrer">
-<FaLinkedin size={35}/>
-</a>
-
-<a href="https://https://www.youtube.com/@amit_pandey7275" target="_blank" rel="noreferrer">
-<FaYoutube size={35}/>
-</a>
-
-<a href="https://instagram.com/amit_pandey7275" target="_blank" rel="noreferrer">
-<FaInstagram size={35}/>
-</a>
-
-<a href="https://wa.me/7275606829" target="_blank" rel="noreferrer">
-<FaWhatsapp size={35}/>
-</a>
-
-<a href="https://facebook.com/amit_pandey7275" target="_blank" rel="noreferrer">
-<FaFacebook size={35}/>
-</a>
-
-<a href="https://snapchat.com/amit_pandey7275" target="_blank" rel="noreferrer">
-<FaSnapchat size={35}/>
-</a>
-
-</div>
-
-</section>
-
-
 {/* Footer */}
 
-<footer className="section">
+<footer className="footer">
+
+<div className="social-icons">
+
+<a href="mailto:ap6238969@gmail.com"><FaEnvelope size={28}/></a>
+
+<a href="tel:+917275606829"><FaPhone size={28}/></a>
+
+<a href="https://github.com/amitpandey7275" target="_blank" rel="noreferrer"><FaGithub size={28}/></a>
+
+<a href="https://linkedin.com/in/amit_pandey7275" target="_blank" rel="noreferrer"><FaLinkedin size={28}/></a>
+
+<a href="https://www.youtube.com/@amit_pandey7275" target="_blank" rel="noreferrer"><FaYoutube size={28}/></a>
+
+<a href="https://instagram.com/amit_pandey7275" target="_blank" rel="noreferrer"><FaInstagram size={28}/></a>
+
+<a href="https://wa.me/917275606829" target="_blank" rel="noreferrer"><FaWhatsapp size={28}/></a>
+
+<a href="https://facebook.com/amitpandey7275" target="_blank" rel="noreferrer"><FaFacebook size={28}/></a>
+
+<a href="https://snapchat.com/add/amitpandey7275" target="_blank" rel="noreferrer"><FaSnapchat size={28}/></a>
+
+</div>
 
 <p>© 2026 Amit Pandey</p>
 <p>Jai Mata Di 🙏</p>
 
 </footer>
-
 
 </div>
 

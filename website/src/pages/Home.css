@@ -215,6 +215,34 @@ color:#FFFC00;
 }
 
 
+.footer{
+background:#333;
+color:white;
+text-align:center;
+padding:12px 0px;   /* pehle 20px tha */
+margin-top:15px;    /* pehle 40px tha */
+}
+
+.social-icons{
+display:flex;
+justify-content:center;
+gap:18px;           /* pehle 25px tha */
+margin-bottom:4px;  /* pehle 15px tha */
+flex-wrap:wrap;
+}
+
+.social-icons a{
+color:white;
+font-size:24px;
+transition:0.3s;
+}
+
+.social-icons a:hover{
+transform:scale(1.2);
+color:#ffd700;
+}
+
+
 /* responsive */
 
 @media (max-width:768px){
