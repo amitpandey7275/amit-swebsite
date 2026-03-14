@@ -4,10 +4,11 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 const User = require("../models/user");
+const Photo = require("../models/Photo"); // NEW
 
 
 // REGISTER
-router.post("/register",async(req,res)=>{
+router.post("/register", async (req,res)=>{
 
 try{
 
@@ -33,7 +34,7 @@ res.status(500).json(err);
 
 
 // LOGIN
-router.post("/login",async(req,res)=>{
+router.post("/login", async (req,res)=>{
 
 try{
 
@@ -65,6 +66,24 @@ role:user.role
 }catch(err){
 
 res.status(500).json(err);
+
+}
+
+});
+
+
+// GET PHOTOS (Gallery)
+router.get("/photos", async (req,res)=>{
+
+try{
+
+const photos = await Photo.find();
+
+res.json(photos);
+
+}catch(err){
+
+res.status(500).json({error:"Error fetching photos"});
 
 }
 
