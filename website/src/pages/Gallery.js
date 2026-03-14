@@ -8,7 +8,7 @@ const [photos,setPhotos] = useState([]);
 
 useEffect(()=>{
 
-axios.get("http://localhost:5000/photos")
+axios.get("https://your-backend.onrender.com/photos")
 .then(res=>{
 setPhotos(res.data);
 })

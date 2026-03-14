@@ -18,7 +18,7 @@ e.preventDefault();
 try{
 
 await axios.post(
-"http://localhost:5000/register",
+"https://amit-swebsite.onrender.com/register",
 {name,email,password}
 );
 
@@ -51,8 +51,8 @@ required
 />
 
 <input
+type="tel"
 placeholder="Enter Mobile Number"
-onChange={(e)=>setName(e.target.value)}
 required
 />
 
