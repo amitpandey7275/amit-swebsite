@@ -1,0 +1,299 @@
+/* body */
+
+body{
+margin:0;
+font-family: "Poppins", Arial, Helvetica, sans-serif;
+background:linear-gradient(120deg,#fdfbfb,#ebedee);
+scroll-behavior:smooth;
+}
+
+
+/* navbar */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:linear-gradient(90deg,#1f1c2c,#928dab);
+padding:15px 40px;
+color:white;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.navbar ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+font-size:16px;
+transition:0.3s;
+font-weight:500;
+}
+
+.navbar a:hover{
+color:#ffd700;
+transform:scale(1.05);
+}
+
+
+/* home section */
+
+.home{
+
+min-height:100vh;
+
+background:linear-gradient(
+rgba(0,0,0,0.6),
+rgba(0,0,0,0.6)
+),
+url("../images/home.png");
+
+background-size:cover;
+background-position:center;
+
+color:white;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+}
+
+.home h1{
+font-size:50px;
+margin-bottom:10px;
+letter-spacing:2px;
+}
+
+.home h2{
+font-size:32px;
+margin-bottom:15px;
+}
+
+.home p{
+font-size:20px;
+max-width:600px;
+}
+
+
+
+/* skill bars */
+
+.skill{
+max-width:400px;
+margin:5px auto;
+text-align:left;
+}
+
+.skill p{
+margin-bottom:6px;
+font-weight:bold;
+}
+
+.skill-bar{
+background:#ddd;
+border-radius:20px;
+overflow:hidden;
+height:20px;
+}
+
+.skill-fill{
+height:100%;
+color:white;
+text-align:right;
+padding-right:10px;
+line-height:20px;
+font-size:12px;
+border-radius:20px;
+animation:fillSkill 2s ease-in-out;
+}
+
+/* colors */
+
+.cpp{ width:80%; background:#6c63ff; }
+
+.java{ width:70%; background:#ff9800; }
+
+.js{ width:75%; background:#f7df1e; color:black; }
+
+.react{ width:70%; background:#61dafb; color:black; }
+
+.node{ width:65%; background:#3c873a; }
+
+/* animation */
+
+@keyframes fillSkill{
+from{
+width:0;
+}
+}
+
+/* sections */
+
+.section{
+padding:80px 40px;
+text-align:center;
+}
+
+.section:nth-child(even){
+background:#ffffff;
+}
+
+.section:nth-child(odd){
+background:#f4f7ff;
+}
+
+.section h2{
+font-size:36px;
+margin-bottom:25px;
+color:#2c2c2c;
+}
+
+.section h3{
+margin-top:30px;
+color:#444;
+font-size:22px;
+}
+
+.section p{
+max-width:800px;
+margin:10px auto;
+line-height:1.7;
+color:#555;
+font-size:16px;
+}
+
+
+/* links */
+
+.section a{
+color:#6c63ff;
+font-weight:bold;
+text-decoration:none;
+}
+
+.section a:hover{
+text-decoration:underline;
+}
+
+
+/* gallery */
+
+.gallery{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.gallery img{
+width:200px;
+border-radius:12px;
+transition:0.3s;
+box-shadow:0 5px 12px rgba(0,0,0,0.2);
+}
+
+.gallery img:hover{
+transform:scale(1.07);
+}
+
+
+/* contact icons */
+
+.contact-icons{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-top:20px;
+flex-wrap:wrap;
+}
+
+.contact-icons a{
+font-size:30px;
+transition:0.3s;
+}
+
+.contact-icons a:hover{
+transform:scale(1.3);
+}
+
+
+/* icon colors */
+
+.contact-icons a:nth-child(1){ color:#EA4335; }
+.contact-icons a:nth-child(2){ color:#2E86C1; }
+.contact-icons a:nth-child(3){ color:black; }
+.contact-icons a:nth-child(4){ color:#0077B5; }
+.contact-icons a:nth-child(5){ color:red; }
+.contact-icons a:nth-child(6){ color:#E1306C; }
+.contact-icons a:nth-child(7){ color:#25D366; }
+.contact-icons a:nth-child(8){ color:#1877F2; }
+.contact-icons a:nth-child(9){ color:#FFFC00; }
+
+
+/* footer */
+
+.footer{
+background:linear-gradient(90deg,#1f1c2c,#928dab);
+color:white;
+text-align:center;
+padding:18px 0px;
+margin-top:20px;
+}
+
+.social-icons{
+display:flex;
+justify-content:center;
+gap:20px;
+margin-bottom:8px;
+flex-wrap:wrap;
+}
+
+.social-icons a{
+color:white;
+font-size:26px;
+transition:0.3s;
+}
+
+.social-icons a:hover{
+transform:scale(1.2);
+color:#ffd700;
+}
+
+
+/* responsive */
+
+@media (max-width:768px){
+
+.navbar{
+flex-direction:column;
+gap:10px;
+}
+
+.navbar ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.section{
+padding:60px 20px;
+}
+
+.home h1{
+font-size:36px;
+}
+
+.home h2{
+font-size:24px;
+}
+
+}

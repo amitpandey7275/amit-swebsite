@@ -1,0 +1,120 @@
+.journey-container{
+
+padding:60px;
+
+text-align:center;
+
+background:#f9f9f9;
+
+min-height:100vh;
+
+}
+
+.journey-container h2{
+
+font-size:34px;
+
+margin-bottom:40px;
+
+}
+
+
+/* timeline */
+
+.timeline{
+
+position:relative;
+
+max-width:700px;
+
+margin:auto;
+
+}
+
+/* vertical line */
+
+.timeline::before{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+width:4px;
+
+background:#007bff;
+
+top:0;
+
+bottom:0;
+
+transform:translateX(-50%);
+
+}
+
+/* items */
+
+.timeline-item{
+
+background:white;
+
+padding:20px;
+
+border-radius:10px;
+
+width:45%;
+
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+
+margin-bottom:30px;
+
+position:relative;
+
+}
+
+/* left side */
+
+.timeline-item:nth-child(odd){
+
+left:0;
+
+}
+
+/* right side */
+
+.timeline-item:nth-child(even){
+
+left:55%;
+
+}
+
+/* year */
+
+.timeline-item h3{
+
+color:#007bff;
+
+margin-bottom:10px;
+
+}
+
+/* mobile responsive */
+
+@media(max-width:768px){
+
+.timeline::before{
+
+left:20px;
+
+}
+
+.timeline-item{
+
+width:90%;
+
+left:40px !important;
+
+}
+
+}
