@@ -1,4 +1,5 @@
 import React from "react";
+import GoogleTranslate from "./GoogleTranslate";
 import { Link, useNavigate } from "react-router-dom";
 import {
 FaGithub,
@@ -38,8 +39,13 @@ return (
 
 <nav className="navbar">
 
-<ul>
+ 
+    
 
+
+
+<ul>
+<li><GoogleTranslate /></li>
 <li><a href="#home">Home</a></li>
 
 <li><a href="#about">About</a></li>
