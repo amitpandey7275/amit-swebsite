@@ -10,7 +10,7 @@ import ProtectedRoute from "./ProtectedRoute";
 
 function App() {
   return (
-    <BrowserRouter basename="/amit-swebsite">
+    <BrowserRouter>
       <Routes>
 
         <Route path="/" element={<Home />} />
